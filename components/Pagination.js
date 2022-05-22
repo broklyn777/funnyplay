@@ -26,8 +26,8 @@ export default function Pagination({ totalPages, currentPage }) {
           </button>
         )}
         {nextPage && (
-          <Link href={`/blog/page/${currentPage + 1}`}>
-            <button rel="next">Next</button>
+          <Link href={`/blogg/page/${currentPage + 1}`}>
+            <button rel="next">Nästa</button>
           </Link>
         )}
       </nav>
