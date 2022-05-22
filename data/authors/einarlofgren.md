@@ -1,5 +1,5 @@
 ---
-name: Einar Löfgren
+name: Einar Lofgren
 avatar: /static/images/avatar.png
 occupation: Professor of Games
 company: MIT University

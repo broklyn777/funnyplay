@@ -19,7 +19,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   return (
     <>
       <div className="divide-y">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+        {/* <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
@@ -28,7 +28,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               aria-label="Search articles"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search articles"
+              placeholder="Sök lekar..."
               className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg
@@ -46,16 +46,16 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               />
             </svg>
           </div>
-        </div>
+        </div> */}
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, authors, summary, tags } = frontMatter
             return (
               <li key={slug} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
-                    <dt className="sr-only">Published on</dt>
+                    <dt className="sr-only">Publiserad</dt>
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>{formatDate(date)}</time>
                     </dd>
@@ -76,6 +76,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                       {summary}
                     </div>
+                    <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                      {authors}
+                    </div>
                   </div>
                 </article>
               </li>
@@ -83,9 +86,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           })}
         </ul>
       </div>
-      {pagination && pagination.totalPages > 1 && !searchValue && (
+      {/* {pagination && pagination.totalPages > 1 && !searchValue && (
         <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
-      )}
+      )} */}
     </>
   )
 }

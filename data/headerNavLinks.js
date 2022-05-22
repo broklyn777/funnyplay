@@ -5,8 +5,8 @@ const headerNavLinks = [
   { href: '/om-oss', title: 'Om oss' },
   // { href: '/blog', title: 'Blog' },
   // { href: '/tags', title: 'Tags' },
-  { href: '/racettes', title: 'racettes' },
-  // { href: '/about', title: 'About' },
+  // { href: '/racettes', title: 'racettes' },
+  { href: '/about', title: 'About' },
 ]
 
 export default headerNavLinks
