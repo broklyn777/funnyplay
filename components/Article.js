@@ -19,7 +19,7 @@ const Article = ({ slug, title, summary, tags, image, isH2 = true, hasExtraLink 
   //   )
   // } else {
   let thumbnail = (
-    <Link href={`/recettes/${slug}`} title={title} className="w-full xl:w-auto">
+    <Link href={`/blog/${slug}`} title={title} className="w-full xl:w-auto">
       <Image
         alt="illustration"
         className="rounded object-cover"
