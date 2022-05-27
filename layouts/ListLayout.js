@@ -49,9 +49,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           </div>
         </div>
         <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {/* {!filteredBlogPosts.length && 'No posts found.'} */}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, authors, summary, image, tags } = frontMatter
+            const { slug, date, title, authors, summary, images, tags } = frontMatter
 
             return (
               <li key={slug} className="py-4">
@@ -72,7 +72,16 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                           {title}
                         </Link>
                       </h3>
-
+                      <div className="col-md-4 m-auto">
+                        {/* <Image
+                          src={.frontMatter.images}
+                          className="img-fluid mt-1 rounded-start"
+                          alt="thumbnail"
+                          width={500}
+                          height={400}
+                          objectFit="cover"
+                        /> */}
+                      </div>
                       {/* tags */}
                       <div className="flex flex-wrap">
                         {tags.map((tag) => (
