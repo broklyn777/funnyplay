@@ -1,10 +1,11 @@
 ---
 title: Introducing Multi-part Posts with Nested Routing
-date: '2021-05-02'
+date: '2022-05-22'
 tags: ['multi-author', 'next-js', 'feature']
-draft: true
+draft: false
 summary: 'The blog template supports posts in nested sub-folders. This can be used to group posts of similar content e.g. a multi-part course. This post is itself an example of a nested route!'
-author: alois
+images: [/static/images/testlek/pennor.jpeg]
+authors: ['rolig']
 ---
 
 # Nested Routes
@@ -19,13 +20,13 @@ We use Next.js catch all routes to handle the routing and path creations.
 
 ## Use Cases
 
-Here's some reasons to use nested routes
+Here are some reasons to use nested routes
 
 - More logical content organisation (blogs will still be displayed based on the created date)
 - Multi-part posts
 - Different sub-routes for each author
-- Internationalization (though it would be recommended to use [Next.js built in i8n routing](https://nextjs.org/docs/advanced-features/i18n-routing))
+- Internationalization (though it would be recommended to use [Next.js built-in i8n routing](https://nextjs.org/docs/advanced-features/i18n-routing))
 
 ## Note
 
-- The previous/next post links at bottom of the template is currently sorted by date. One could explore modifying the template to refer the reader to the previous/next post in the series, rather than by date.
+- The previous/next post links at bottom of the template are currently sorted by date. One could explore modifying the template to refer the reader to the previous/next post in the series, rather than by date.
